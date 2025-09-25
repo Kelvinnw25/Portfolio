@@ -1,4 +1,3 @@
-/* ===== CSS RESET & DASAR ===== */
 * {
     margin: 0;
     padding: 0;
@@ -6,18 +5,17 @@
 }
 
 :root {
-    /* Skema Warna (Dark Mode) */
-    --primary-color: #00aaff; /* Biru cerah */
+    --primary-color: #00aaff;
     --primary-color-hover: #0088cc;
-    --background-color: #0a192f; /* Navy Gelap */
-    --card-background: #112240; /* Navy Sedang */
-    --text-color-primary: #ccd6f6; /* Putih keabu-abuan */
-    --text-color-secondary: #8892b0; /* Abu-abu */
+    --background-color: #0a192f;
+    --card-background: #112240;
+    --text-color-primary: #ccd6f6;
+    --text-color-secondary: #8892b0;
     --font-family: 'Poppins', sans-serif;
 }
 
 html {
-    scroll-behavior: smooth; /* Efek smooth-scroll */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -75,19 +73,17 @@ img {
     height: auto;
 }
 
-/* ===== HEADER / NAVIGASI ===== */
 .header {
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
-    background-color: rgba(10, 25, 47, 0.85); /* Background navy transparan */
+    background-color: rgba(10, 25, 47, 0.85);
     backdrop-filter: blur(10px);
     transition: box-shadow 0.3s;
 }
 
-/* Efek shadow di Nav pas scroll */
 .header-scrolled {
     box-shadow: 0 2px 15px rgba(2, 12, 27, 0.7);
 }
@@ -120,9 +116,6 @@ img {
     color: var(--primary-color);
 }
 
-/* (Nanti tambahin @media query untuk mobile nav) */
-
-/* ===== BUTTON ===== */
 .button {
     display: inline-block;
     background-color: var(--primary-color);
@@ -148,7 +141,6 @@ img {
     background-color: rgba(0, 170, 255, 0.1);
 }
 
-/* ===== HERO SECTION ===== */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -206,7 +198,6 @@ img {
     transform: translateY(-5px);
 }
 
-/* ===== ABOUT ME ===== */
 .about-container {
     grid-template-columns: 1fr 2fr;
     align-items: center;
@@ -229,7 +220,6 @@ img {
     font-size: 1.1rem;
 }
 
-/* ===== SKILLS ===== */
 .skills-container {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
@@ -266,24 +256,17 @@ img {
     font-weight: 600;
 }
 
-
-
-/* ===== EFEK BARU UNTUK SKILLS ===== */
-
-/* 1. Sembunyiin skill-item-nya dulu */
 .skill-item {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.4s ease-out, transform 0.4s ease-out;
 }
 
-/* 2. Class 'show' ini yang bakal ditambahin pake JS */
 .skill-item.show {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* 3. (BONUS) Efek 'pop' pas di-hover */
 .skills-list span:hover {
     transform: scale(1.1);
     background-color: var(--primary-color);
@@ -291,7 +274,6 @@ img {
     cursor: default;
 }
 
-/* 4. Edit style .skills-list span yg udah ada */
 .skills-list span {
     background-color: var(--background-color);
     color: var(--text-color-secondary);
@@ -299,14 +281,9 @@ img {
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: 600;
-    
-    /* TAMBAHIN INI BIAR EFEK HOVERNYA MULUS */
     transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
-
-
-/* ===== PROJECTS ===== */
 .projects-container {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
@@ -372,14 +349,12 @@ img {
     color: var(--primary-color);
 }
 
-/* ===== EXPERIENCE (TIMELINE) ===== */
 .timeline {
     position: relative;
     max-width: 700px;
     margin: 0 auto;
 }
 
-/* Garis vertikal di tengah */
 .timeline::after {
     content: '';
     position: absolute;
@@ -397,20 +372,17 @@ img {
     width: 50%;
 }
 
-/* Item di kiri */
 .timeline-item:nth-child(odd) {
     left: 0;
-    padding-right: 60px; /* Jarak dari garis tengah */
+    padding-right: 60px;
     text-align: right;
 }
 
-/* Item di kanan */
 .timeline-item:nth-child(even) {
     left: 50%;
-    padding-left: 60px; /* Jarak dari garis tengah */
+    padding-left: 60px;
 }
 
-/* Bulatan di garis */
 .timeline-item::after {
     content: '';
     position: absolute;
@@ -458,7 +430,6 @@ img {
     color: var(--text-color-secondary);
 }
 
-/* ===== EDUCATION ===== */
 .education-content {
     text-align: center;
     max-width: 600px;
@@ -480,7 +451,6 @@ img {
     color: var(--primary-color);
 }
 
-/* ===== FOOTER / CONTACT ===== */
 .footer {
     background-color: var(--card-background);
     padding: 4rem 0 2rem;
@@ -525,7 +495,6 @@ img {
     color: #e25555;
 }
 
-/* ===== EFEK ANIMASI SCROLL ===== */
 .hidden-anim {
     opacity: 0;
     transform: translateY(30px);
@@ -537,14 +506,11 @@ img {
     transform: translateY(0);
 }
 
-
-/* ===== RESPONSIVE DESIGN (MOBILE) ===== */
 @media screen and (max-width: 768px) {
     .section {
         padding: 4rem 0 2rem;
     }
 
-    /* Sembunyikan nav menu, (nanti butuh JS untuk hamburger menu) */
     .nav-menu {
         display: none; 
     }
@@ -569,7 +535,6 @@ img {
         margin: 0 auto 1.5rem auto;
     }
 
-    /* Timeline jadi lurus */
     .timeline::after {
         left: 30px;
     }
